@@ -3,6 +3,7 @@
 
 	let msg = '';
 	async function refresh() {
+		msg = 'Reloading';
 		await invalidateAll();
 		msg = 'Reload done';
 		setTimeout(() => (msg = ''), 3000);
