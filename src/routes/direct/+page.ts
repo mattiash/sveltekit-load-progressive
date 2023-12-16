@@ -1,7 +1,7 @@
 import { sleep } from '$lib/util';
 
-export function load() {
+export async function load() {
 	return {
-		entries: sleep(1000).then(() => ['a', 'b', 'c' + Math.random()])
+		entries: await sleep(1000).then(() => ['a', 'b', 'c' + Math.random()])
 	};
 }
